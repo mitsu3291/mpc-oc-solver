@@ -20,7 +20,7 @@ cart_w = 0.5
 cart_h = 0.25
 bottom_h = 0.05
 ax.set_aspect('equal', adjustable='box')
-ax.plot([y, y+l*np.sin(theta)], [bottom_h+cart_h/2, bottom_h+cart_h/2-l*np.cos(theta)])
+ax.plot([y, y+l*np.sin(theta)], [bottom_h+cart_h/2, bottom_h+cart_h/2-(l-bottom_h)*np.cos(theta)], color='#000000')
 cart = patches.Rectangle(xy=(y-cart_w/2, bottom_h), width=0.5, height=0.25, ec='#000000', fill=False)
 wheel_l = patches.Circle(xy=(y-cart_w/4, bottom_h), radius=bottom_h, fc='#000000', ec='#000000')
 wheel_r = patches.Circle(xy=(y+cart_w/4, bottom_h), radius=bottom_h, fc='#000000', ec='#000000')
